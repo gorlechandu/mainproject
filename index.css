@@ -1,0 +1,468 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+body {
+  background: #080808;
+  color: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+#header {
+  width: 100%;
+  height: 100vh;
+  background-image: url(images/background.png);
+  background-size: cover;
+  background-position: center;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* Make navbar stretch across the full screen */
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e1e2f;
+  padding: 10px 50px; /* Slightly more padding for better spacing */
+}
+
+/* Logo styling */
+.logo {
+  height: 50px;
+  width: auto;
+}
+/* Navigation links */
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  gap: 25px;
+  position: fixed;
+  right: 80px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.nav-links li a:hover {
+  color: #00bcd4;
+  text-decoration: underline;
+}
+/* navbar code is end  */
+
+.header-test {
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+.header-test h1 {
+  margin-top: 20px;
+  font-size: 40px;
+  font-weight: 900;
+}
+.header-test span {
+  color: #ff0000;
+}
+/* About section will be start here */
+#about {
+  padding: 80px 0;
+}
+.row {
+  display: flex;
+}
+.about-col-1 {
+  flex-basis: 35%;
+}
+.about-col-1 img {
+  width: 450px;
+  height: 400px;
+  margin-left: 30px;
+  flex-basis: 60%;
+  border: 1px solid grey;
+  border-radius: 20px;
+}
+.about-col-2 {
+  margin-left: 30px;
+}
+.sub-title {
+  color: #ffffff;
+  font-size: 60px;
+  font-weight: 900;
+  text-decoration: underline;
+}
+.tab-titles {
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.tab-links {
+  margin-left: 10px;
+  font-size: 20px;
+  font-weight: 900;
+  position: relative;
+  cursor: pointer;
+}
+.tab-links::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #ff004f;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+.tab-links.active-link::after {
+  width: 50%;
+}
+
+.tab-contents ul li {
+  list-style: none;
+  margin: 10px 0;
+}
+.tab-contents ul li span {
+  font-size: 14px;
+  color: #ff0000;
+}
+.tab-contents {
+  display: none;
+}
+
+.tab-contents.active-tab {
+  display: block;
+}
+
+/* This is services part code i start style here only */
+.service-subtitle h1 {
+  font-size: 40px;
+  font-weight: 900;
+  padding: 10px 20px;
+  text-align: start;
+  text-decoration: underline;
+}
+.service-subtitle h1:hover {
+  color: #007bff;
+  /* cursor: pointer; */
+}
+.card-container {
+  display: flex;
+  justify-content: center; /* Centers the cards horizontally */
+  gap: 30px; /* Space between cards */
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  padding: 40px 20px;
+  background-color: #000000;
+}
+
+.card {
+  background: #808080;
+  border-radius: 15px;
+  width: 300px;
+  padding: 30px 20px;
+  text-align: center;
+  align-items: flex-start;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  background-color: rgba(233, 6, 47, 0.495);
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px hsla(0, 0%, 0%, 0.2);
+}
+
+.card .icon {
+  font-size: 50px;
+  color: #0000ff;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  font-size: 25px;
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-weight: 900;
+}
+
+.card p {
+  font-size: 15px;
+  color: #ffffff;
+  text-align: left; /* Change from center to left */
+  line-height: 1.6; /* Optional: Better readability */
+}
+
+.card a {
+  margin-bottom: 20px;
+}
+/* style part code is completed services part  end */
+
+/* portfolio part sttyle is start here  */
+#portfolio {
+  padding: 50px 0;
+}
+.sub-title {
+  font-size: 60px;
+  font-weight: 900;
+  margin-left: 15px;
+}
+.sub-title:hover {
+  text-decoration: underline;
+  color: #0000ff;
+}
+.work-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.work {
+  flex: 1 1 calc(33.333% - 20px);
+  box-sizing: border-box;
+}
+
+.work img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+.work img:hover {
+  transform: scale(1.05); /* Slight zoom-in */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Soft shadow */
+  cursor: pointer; /* Optional: show pointer cursor on hover */
+}
+
+.layer h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  color: hsla(348, 100%, 50%, 0.886);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  align-items: center;
+}
+.layer h3:hover {
+  text-shadow: 2px 2px 5px #008000; /* x-offset, y-offset, blur, color */
+  transition: text-shadow 0.3s ease;
+  cursor: point;
+}
+
+.layer p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #ddd;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  padding: 0 10px;
+  align-items: center;
+}
+
+.layer a i {
+  font-size: 25px;
+  color: #008000;
+  border: 2px solid red;
+  border-radius: 50%;
+  background-color: #ffffff;
+  padding: 12px;
+  transition: all 0.3s ease;
+}
+
+/* Optional: Add hover effect to icon */
+.layer a i:hover {
+  background-color: white;
+  color: #ff0000;
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.btn {
+  display: block;
+  margin: 20px auto;
+  font-size: 25px;
+  width: fit-content;
+  border: 1px solid #ff004f;
+  padding: 10px 30px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #fff;
+}
+.btn:hover {
+  background-color: #ff0000;
+  transition: 1.5s;
+}
+
+/* ..... contact ...... */
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Contact Section */
+#contact {
+  background-color: black;
+  padding: 60px 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Container Flex Layout */
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+/* Left Column */
+.contact-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.section-title {
+  font-size: 32px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-decoration: underline;
+  text-shadow: #d407009e;
+}
+
+.contact-left p {
+  font-size: 16px;
+  color: #ffffff;
+  margin: 10px 0;
+}
+
+.contact-left i {
+  margin-right: 10px;
+  color: #007bff;
+}
+
+/* Social Icons */
+.social-icons a {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 22px;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #007bff;
+}
+
+/* Right Column - Form */
+#contact-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+#contact-right form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-right input,
+.contact-right textarea {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  border-radius: 6px;
+  font-size: 15px;
+  width: 100%;
+  transition: border-color 0.3s ease;
+}
+
+.contact-right input:focus,
+.contact-right textarea:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.contact-right .submit {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-right .submit:hover {
+  background-color: #0056b3;
+}
+.login {
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 900;
+  align-items: center;
+  text-decoration: underline;
+  margin-left: 140px;
+}
+
+.submit {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 900;
+  text-align: center;
+  background-color: #008000;
+}
+
+.btn2 {
+  width: 60%;
+  padding: 5px 5px;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  font-weight: 900;
+  background-color: rgba(255, 0, 0, 0.445);
+}
+
+.copyright {
+  text-align: center;
+  padding: 20px;
+  background-color: #000000; /* Optional: background color */
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.copyright {
+  margin-top: 5px;
+}
+.copyright i {
+  color: #ff0000; /* Makes the heart icon red */
+}
+
+/* extra data is add after media quries  */
+nav .fas {
+  display: none;
+}
+
+nav ul .fas {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  cursor: pointer;
+}
+*/ .strong {
+  color: red;
+  text-decoration: underline;
+}
